@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5151A2431EE72D8000AEC61E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151A2421EE72D8000AEC61E /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		5151A2451EE72DF700AEC61E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151A2441EE72DF700AEC61E /* CoreLocation.framework */; };
 		51B4B1381EE6FB33008F50F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4B1371EE6FB33008F50F1 /* AppDelegate.swift */; };
 		51B4B13A1EE6FB33008F50F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4B1391EE6FB33008F50F1 /* FirstViewController.swift */; };
 		51B4B13C1EE6FB33008F50F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B4B13B1EE6FB33008F50F1 /* SecondViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5151A2421EE72D8000AEC61E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5151A2441EE72DF700AEC61E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		51B4B1341EE6FB33008F50F1 /* Prototipo02_TCC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototipo02_TCC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51B4B1371EE6FB33008F50F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51B4B1391EE6FB33008F50F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5151A2451EE72DF700AEC61E /* CoreLocation.framework in Frameworks */,
+				5151A2431EE72D8000AEC61E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5151A2411EE72D8000AEC61E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5151A2441EE72DF700AEC61E /* CoreLocation.framework */,
+				5151A2421EE72D8000AEC61E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		51B4B12B1EE6FB33008F50F1 = {
 			isa = PBXGroup;
 			children = (
 				51B4B1361EE6FB33008F50F1 /* Prototipo02_TCC */,
 				51B4B1351EE6FB33008F50F1 /* Products */,
+				5151A2411EE72D8000AEC61E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +117,11 @@
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = R95CT9ATA8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -267,6 +288,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R95CT9ATA8;
 				INFOPLIST_FILE = Prototipo02_TCC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "matheusmpedrosa.Prototipo02-TCC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -280,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R95CT9ATA8;
 				INFOPLIST_FILE = Prototipo02_TCC/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "matheusmpedrosa.Prototipo02-TCC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +329,7 @@
 				51B4B14A1EE6FB33008F50F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
